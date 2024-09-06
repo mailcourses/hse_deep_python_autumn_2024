@@ -177,11 +177,3 @@ class TestUser(unittest.TestCase):
             ],
             mock_fetch.mock_calls,
         )
-
-
-
-
-
-
-
-
