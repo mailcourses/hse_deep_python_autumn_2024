@@ -12,19 +12,19 @@ class TestUser(unittest.TestCase):
         self.assertEqual("login", user.name)
         self.assertEqual(42, user.age)
 
-    # def test_greetings(self):
-    #     user = User("login", 42)
-    #
-    #     self.assertEqual("login", user.name)
-    #     self.assertEqual("Hello, login!", user.greetings())
-    #
-    # def test_birthday(self):
-    #     user = User("login", 42)
-    #
-    #     self.assertEqual(42, user.age)
-    #     self.assertEqual(43, user.birthday())
-    #
-    #     self.assertEqual(43, user.age)
+    def test_greetings(self):
+        user = User("login", 42)
+
+        self.assertEqual("login", user.name)
+        self.assertEqual("Hello, login!", user.greetings())
+
+    def test_birthday(self):
+        user = User("login", 42)
+
+        self.assertEqual(42, user.age)
+        self.assertEqual(43, user.birthday())
+
+        self.assertEqual(43, user.age)
 
     def test_get_friends_not_work(self):
         user = User("login", 42)
