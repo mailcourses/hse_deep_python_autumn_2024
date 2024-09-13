@@ -18,10 +18,10 @@ json для задания всегда имеет вид словаря с кл
 
 ```py
 def process_json(
-	json_str: str,
-	required_keys: list[str] | None = None,
-	tokens: list[str] | None = None,
-	callback: Callable[str, str] | None = None,
+    json_str: str,
+    required_keys: list[str] | None = None,
+    tokens: list[str] | None = None,
+    callback: Callable[str, str] | None = None,
 ) -> None:
     ...
 
@@ -48,12 +48,12 @@ process_json(json_str, required_keys, tokens, lambda key, token: f"{key=}, {toke
 
 ```py
 def retry_deco(...):
-	...
+    ...
 
 
 @retry_deco(3)
 def add(a, b):
-	return a + b
+    return a + b
 
 
 add(4, 2)
@@ -65,10 +65,10 @@ add(4, b=3)
 
 @retry_deco(3)
 def check_str(value=None):
-	if value is None:
-		raise ValueError()
+    if value is None:
+        raise ValueError()
 
-	return isinstance(value, str)
+    return isinstance(value, str)
 
 
 check_str(value="123")
@@ -85,10 +85,10 @@ check_str(value=None)
 
 @retry_deco(2, [ValueError])
 def check_int(value=None):
-	if value is None:
-		raise ValueError()
+    if value is None:
+        raise ValueError()
 
-	return isinstance(value, int)
+    return isinstance(value, int)
 
 check_int(value=1)
 # run "check_int" with keyword kwargs = {"value": 1}, attempt = 1, result = True
