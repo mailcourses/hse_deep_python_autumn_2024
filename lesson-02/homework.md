@@ -21,7 +21,7 @@ def process_json(
     json_str: str,
     required_keys: list[str] | None = None,
     tokens: list[str] | None = None,
-    callback: Callable[str, str] | None = None,
+    callback: Callable[[str, str], None] | None = None,
 ) -> None:
     ...
 
