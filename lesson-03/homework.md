@@ -7,8 +7,8 @@
 - экземпляры `CustomList` можно складывать и вычитать друг с другом, с обычными списками и с числами:
   ```py
   CustomList([5, 1, 3, 7]) + CustomList([1, 2, 7])  # CustomList([6, 3, 10, 7])
-  CustomList([10]) + [2, 5]  # CustomList([12, 15])
-  [2, 5] + CustomList([10])  # CustomList([12, 15])
+  CustomList([10]) + [2, 5]  # CustomList([12, 5])
+  [2, 5] + CustomList([10])  # CustomList([12, 5])
   CustomList([2, 5]) + 10  # CustomList([12, 15])
   10 + CustomList([2, 5])  # CustomList([12, 15])
 
