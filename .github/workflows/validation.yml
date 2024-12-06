@@ -23,6 +23,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Build C-ext
+        working-directory: ./lesson-12/src/capi_utils
+        run: python setup.py install
+
       - name: Check flake8
         run: flake8 .
 
